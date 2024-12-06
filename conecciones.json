@@ -1,0 +1,41 @@
+{
+	"frutas":[
+		"manzana", "banana", "pera", "carambola", "durazno"
+	],
+	"de verdad?":[
+		"posta", "manzana", "obvio"
+	],
+	"partes de la cara":[
+		"boca", "pera", "jeta"
+	],
+	"equipos de futbol":[
+		"boca", "talleres"
+	],
+	"_ floja":[
+		"boca", "pija"
+	],
+	"postres":[
+		"torta", "fruta"
+	],
+	"lesbiana":[
+		"bombera", "bollo", "torta"
+	],
+	"engaño":[
+		"tramoya", "chamuyo", "fruta"
+	],
+	"esperando a _":[
+		"godot", "carroza"
+	],
+	"software argentino":[
+		"godot", "mercadolibre"
+	],
+	"lugares de compras":[
+		"mercadolibre", "jumbo"
+	],
+	"comida frita":[
+		"bollo", "huevo frito", "churro"
+	],
+	"lindo":[
+		"churro"
+	]
+}
