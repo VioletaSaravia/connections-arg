@@ -1,7 +1,7 @@
 import json
 from neo4j import GraphDatabase
 
-with open("conecciones.txt", 'r', encoding='utf-8') as file:
+with open("../data/conecciones.txt", 'r', encoding='utf-8') as file:
     lines: list[str] = [line.strip() for line in file if line.strip()]
 
 nodes: set = set()
@@ -11,7 +11,7 @@ cur_edge: str = ""
 cur_diff: int = 1
 first_word: str = ""
 for i in range(len(lines) - 1):
-    line: str = lines[i].strip()
+    line: str = lines[i]
 
     if line[0] == '#':
         cur_edge = line[4:]
@@ -25,7 +25,7 @@ for i in range(len(lines) - 1):
 
     edges.append({
         "from": line, 
-        "to": lines[i+1].strip() if lines[i+1][0] != '#' else first_word, 
+        "to": lines[i+1] if lines[i+1][0] != '#' else first_word, 
         "difficulty": cur_diff, 
         "name": cur_edge
     })
@@ -40,9 +40,9 @@ def load_graph(tx, nodes, edges):
     
     for edge in edges:
         tx.run("""
-            MATCH (a:Node {name: $f}), (b:Node {name: $t})
-            MERGE (a)-[r:$n {difficulty: $d}]->(b)
-        """, f=edge['from'], t=edge['to'], d=edge['difficulty'], n=edge['name'])
+            MATCH (a:Node {name: $from}), (b:Node {name: $to})
+            MERGE (a)-[r:$name {difficulty: $difficulty}]->(b)
+        """, **edge)
 
 driver = GraphDatabase.driver(uri, auth=(username, password))
 
