@@ -1,47 +1,50 @@
-import matplotlib
-matplotlib.use('tkAgg')
-import matplotlib.pyplot as plt
-import networkx as nx
 import json
+from neo4j import GraphDatabase
 
-with open("conecciones.json", 'r', encoding='utf-8') as f:
-    data = json.load(f)
+with open("conecciones.txt", 'r', encoding='utf-8') as file:
+    lines: list[str] = [line.strip() for line in file if line.strip()]
 
-# LOAD NODES
-G = nx.Graph()
+nodes: set = set()
+edges: list[dict] = []
 
-for k, v in data.items():
-    for n in range(len(v) - 1):
-        G.add_edge(v[n], v[n + 1])
-    G.add_edge(v[-1], v[0])
+cur_edge: str = ""
+cur_diff: int = 1
+first_word: str = ""
+for i in range(len(lines) - 1):
+    line: str = lines[i].strip()
 
-pos = nx.spring_layout(G)
-nx.draw_networkx(G, pos)
+    if line[0] == '#':
+        cur_edge = line[4:]
+        cur_diff = int(line[2])
+        continue
 
-# LOAD EDGES
-pos_cycles = {t: [pos[x] for x in data[t]] for t in data.keys()}
-pos_cycles_centers = {t: [0, 0] for t in data.keys()}
+    if lines[i - 1][0] == '#':
+        first_word = line
+    
+    nodes.add(line)
 
-for k, v in pos_cycles.items():
-    for n in v:
-        pos_cycles_centers[k][0] += n[0]  
-        pos_cycles_centers[k][1] += n[1]  
+    edges.append({
+        "from": line, 
+        "to": lines[i+1].strip() if lines[i+1][0] != '#' else first_word, 
+        "difficulty": cur_diff, 
+        "name": cur_edge
+    })
 
-    # TODO This is the average. We may want the mean.
-    pos_cycles_centers[k][0] /= len(v)
-    pos_cycles_centers[k][1] /= len(v) 
+uri = "bolt://localhost:7687"
+username = "neo4j"
+password = "password"
 
-E = nx.Graph()
+def load_graph(tx, nodes, edges):
+    for node in nodes:
+        tx.run("MERGE (n:Node {name: $name})", name=node)
+    
+    for edge in edges:
+        tx.run("""
+            MATCH (a:Node {name: $f}), (b:Node {name: $t})
+            MERGE (a)-[r:$n {difficulty: $d}]->(b)
+        """, f=edge['from'], t=edge['to'], d=edge['difficulty'], n=edge['name'])
 
-for n in pos_cycles_centers.keys():
-    E.add_node(n)
+driver = GraphDatabase.driver(uri, auth=(username, password))
 
-nx.draw_networkx(
-    E,
-    pos=pos_cycles_centers,
-    **{
-        'node_color':'red'
-    }
-)
-
-plt.show()
+with driver.session() as session:
+    session.write_transaction(load_graph, nodes, edges)

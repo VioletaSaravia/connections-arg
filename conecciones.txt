@@ -1,0 +1,66 @@
+# 1 FRUTAS
+manzana
+banana
+pera
+carambola
+durazno
+
+# 3 DE VERDAD?
+posta
+manzana
+obvio
+
+# 1 PARTES DE LA CARA
+boca
+pera
+jeta
+
+# 2 EQUIPOS DE FUTBOL
+boca
+talleres
+
+# 4 _ FLOJA
+boca
+pija
+
+# 1 POSTRES
+torta
+fruta
+
+# 3 LESBIANA
+bombera
+bollo
+torta
+
+# 3 ENGAÑO
+tramoya
+chamuyo
+fruta
+
+# 4 ESPERANDO A _
+godot
+carroza
+
+# 3 SOFTWARE ARGENTINO
+godot
+mercadolibre
+
+# 2 LUGARES DE COMPRAS
+mercadolibre
+jumbo
+coto
+
+# 2 COMIDA FRITA
+bollo
+huevo frito
+churro
+
+# 2 LINDO
+churro
+
+# 3 CONTIENEN CAFEÍNA
+mate
+chocolate
+cacao
+café
+té
