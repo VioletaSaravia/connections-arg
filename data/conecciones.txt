@@ -57,6 +57,10 @@ churro
 
 # 2 LINDO
 churro
+bombón
+
+# 1 DULCES
+bombón
 
 # 3 CONTIENEN CAFEÍNA
 mate
@@ -64,3 +68,39 @@ chocolate
 cacao
 café
 té
+
+# 3 A _
+pelo
+cuatro manos
+troche y moche
+mansalva
+jugar con hugo
+gusto
+
+# 2 DIOS
+barba
+jesus
+rey
+señor
+
+# 1 CABELLO
+pelo
+barba
+vello
+bigote
+
+# 2 FORMAS DE REFERIRSE A UN EXTRAÑO
+rey
+jefe
+maestro
+master
+flaco
+
+# 2 SATISFECHO
+joya
+pipón
+
+# 3 EDIFICIOS ANTIGUOS
+posta
+pulpería
+taverna
