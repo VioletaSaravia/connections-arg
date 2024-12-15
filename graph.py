@@ -5,20 +5,20 @@ matplotlib.use("tkAgg")
 
 import matplotlib.pyplot as plt
 import networkx as nx
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 
 @dataclass
 class ConnectionsGraph:
-    nodes: set = set()
-    edges: list[dict] = []
-    categories: list[str] = []
+    nodes: set = field(default_factory=lambda: set())
+    edges: list[dict] = field(default_factory=lambda: [])
+    categories: list[str] = field(default_factory=lambda: [])
 
 
 def extract() -> ConnectionsGraph:
     result = ConnectionsGraph()
 
-    with open("data/conecciones.txt", "r", encoding="utf-8") as file:
+    with open("conecciones.txt", "r", encoding="utf-8") as file:
         lines: list[str] = [line.strip() for line in file if line.strip()]
 
     cur_edge: str = ""
@@ -118,8 +118,7 @@ def load(graph: ConnectionsGraph):
         session.write_transaction(build, graph.nodes, graph.edges)
 
 
-graph = extract()
-
-view(graph)
-
-load(graph)
+if __name__ == "__main__":
+    graph = extract()
+    view(graph)
+    # load(graph)

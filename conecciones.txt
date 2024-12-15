@@ -26,6 +26,7 @@ pija
 # 1 POSTRES
 torta
 fruta
+bombon
 
 # 3 LESBIANA
 bombera
@@ -44,6 +45,8 @@ carroza
 # 3 SOFTWARE ARGENTINO
 godot
 mercadolibre
+despegar
+vercel
 
 # 2 LUGARES DE COMPRAS
 mercadolibre
@@ -57,17 +60,15 @@ churro
 
 # 2 LINDO
 churro
-bombón
-
-# 1 DULCES
-bombón
+bombon
+potro
 
 # 3 CONTIENEN CAFEÍNA
 mate
 chocolate
 cacao
-café
-té
+cafe
+te
 
 # 3 A _
 pelo
@@ -81,7 +82,7 @@ gusto
 barba
 jesus
 rey
-señor
+senor
 
 # 1 CABELLO
 pelo
@@ -98,9 +99,49 @@ flaco
 
 # 2 SATISFECHO
 joya
-pipón
+pipon
 
-# 3 EDIFICIOS ANTIGUOS
+# 3 ESTABLECIMIENTOS ANTIGUOS
 posta
-pulpería
-taverna
+pulperia
+taberna
+
+# 1 REALEZA
+rey
+virrey
+princesita
+duque
+
+# 4 APODOS DE MÚSICOS ARGENTINOS
+princesita
+gitano
+potro
+flaco
+
+# 2 INMIGRANTE ARGENTINO
+gitano
+turco
+
+# 4 APODOS DE DTs ARGENTINOS
+cholo
+virrey
+loco
+flaco
+doctor
+
+# 1 PROFESIONES
+bombera
+doctor
+
+# 4 APODOS DE JUGADORES DE FÚTBOL ARGENTINOS
+turco
+pulga
+apache
+bruja
+pupi
+pelusa
+
+# 3 QUEDAR COMO UN _
+duque
+gil
+boludo
