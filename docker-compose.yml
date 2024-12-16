@@ -1,19 +1,4 @@
 services:
-  python-app:
-    image: python:3.12
-    container_name: python-container
-    build:
-      context: .
-      dockerfile: Dockerfile
-    volumes:
-      - ./app:/usr/src/app
-    working_dir: /usr/src/app
-    command: ["python", "graph.py"]
-    depends_on:
-      - neo4j
-    networks:
-      - app-network
-
   neo4j:
     image: neo4j:5.11
     container_name: neo4j-container
@@ -22,9 +7,3 @@ services:
     ports:
       - "7474:7474"
       - "7687:7687"
-    networks:
-      - app-network
-
-networks:
-  app-network:
-    driver: bridge

@@ -14,7 +14,6 @@ class ConnectionsGraph:
     edges: list[dict] = field(default_factory=lambda: [])
     categories: list[str] = field(default_factory=lambda: [])
 
-
 def extract() -> ConnectionsGraph:
     result = ConnectionsGraph()
 
@@ -105,9 +104,9 @@ def load(graph: ConnectionsGraph):
 
         for edge in edges:
             tx.run(
-                """
-                MATCH (a:Node {name: $from}), (b:Node {name: $to})
-                MERGE (a)-[r:$name {difficulty: $difficulty}]->(b)
+                f"""
+                MATCH (a:Node {{name: $from}}), (b:Node {{name: $to}})
+                MERGE (a)-[:`{edge['name'].capitalize()}` {{difficulty: $difficulty}}]->(b)
             """,
                 **edge
             )

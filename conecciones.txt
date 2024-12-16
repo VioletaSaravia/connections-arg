@@ -118,7 +118,7 @@ gitano
 potro
 flaco
 
-# 2 INMIGRANTE ARGENTINO
+# 1 ETNIA
 gitano
 turco
 
