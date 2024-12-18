@@ -10,6 +10,18 @@ services:
     networks:
       - app-network
 
+  python-api:
+  build:
+    context: backend/
+    dockerfile: Dockerfile
+  container_name: python_api
+  ports:
+    - "6969:6969"
+  depends_on:
+    - neo4j
+  networks:
+    - app-network
+
   godot-web-app:
     build:
       context: app/
@@ -18,7 +30,7 @@ services:
     ports:
       - "6970:6970"
     depends_on:
-      - neo4j
+      - python-api
     networks:
       - app-network
 
