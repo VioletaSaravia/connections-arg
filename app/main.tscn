@@ -1,0 +1,194 @@
+[gd_scene load_steps=3 format=3 uid="uid://yup4eufncxp4"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_okn4f"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pc8id"]
+font_size = 24
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_okn4f")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+unique_name_in_owner = true
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+offset_right = 480.0
+offset_bottom = 720.0
+size_flags_vertical = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Título"
+label_settings = SubResource("LabelSettings_pc8id")
+horizontal_alignment = 1
+
+[node name="HSeparator3" type="HSeparator" parent="CenterContainer/VBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(400, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ButtonGrid" type="GridContainer" parent="CenterContainer/VBoxContainer2/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+columns = 4
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer2/VBoxContainer/ButtonGrid"]
+layout_mode = 2
+toggle_mode = true
+action_mode = 0
+text = "Palabra"
+
+[node name="Button2" type="Button" parent="CenterContainer/VBoxContainer2/VBoxContainer/ButtonGrid"]
+layout_mode = 2
+toggle_mode = true
+action_mode = 0
+text = "Palabra"
+
+[node name="Button3" type="Button" parent="CenterContainer/VBoxContainer2/VBoxContainer/ButtonGrid"]
+layout_mode = 2
+toggle_mode = true
+action_mode = 0
+text = "Palabra"
+
+[node name="Button4" type="Button" parent="CenterContainer/VBoxContainer2/VBoxContainer/ButtonGrid"]
+layout_mode = 2
+toggle_mode = true
+action_mode = 0
+text = "Palabra"
+
+[node name="Button5" type="Button" parent="CenterContainer/VBoxContainer2/VBoxContainer/ButtonGrid"]
+layout_mode = 2
+toggle_mode = true
+action_mode = 0
+text = "Palabra"
+
+[node name="Button6" type="Button" parent="CenterContainer/VBoxContainer2/VBoxContainer/ButtonGrid"]
+layout_mode = 2
+toggle_mode = true
+action_mode = 0
+text = "Palabra"
+
+[node name="Button7" type="Button" parent="CenterContainer/VBoxContainer2/VBoxContainer/ButtonGrid"]
+layout_mode = 2
+toggle_mode = true
+action_mode = 0
+text = "Palabra"
+
+[node name="Button8" type="Button" parent="CenterContainer/VBoxContainer2/VBoxContainer/ButtonGrid"]
+layout_mode = 2
+toggle_mode = true
+action_mode = 0
+text = "Palabra"
+
+[node name="Button9" type="Button" parent="CenterContainer/VBoxContainer2/VBoxContainer/ButtonGrid"]
+layout_mode = 2
+toggle_mode = true
+action_mode = 0
+text = "Palabra"
+
+[node name="Button10" type="Button" parent="CenterContainer/VBoxContainer2/VBoxContainer/ButtonGrid"]
+layout_mode = 2
+toggle_mode = true
+action_mode = 0
+text = "Palabra"
+
+[node name="Button11" type="Button" parent="CenterContainer/VBoxContainer2/VBoxContainer/ButtonGrid"]
+layout_mode = 2
+toggle_mode = true
+action_mode = 0
+text = "Palabra"
+
+[node name="Button12" type="Button" parent="CenterContainer/VBoxContainer2/VBoxContainer/ButtonGrid"]
+layout_mode = 2
+toggle_mode = true
+action_mode = 0
+text = "Palabra"
+
+[node name="Button13" type="Button" parent="CenterContainer/VBoxContainer2/VBoxContainer/ButtonGrid"]
+layout_mode = 2
+toggle_mode = true
+action_mode = 0
+text = "Palabra"
+
+[node name="Button14" type="Button" parent="CenterContainer/VBoxContainer2/VBoxContainer/ButtonGrid"]
+layout_mode = 2
+toggle_mode = true
+action_mode = 0
+text = "Palabra"
+
+[node name="Button15" type="Button" parent="CenterContainer/VBoxContainer2/VBoxContainer/ButtonGrid"]
+layout_mode = 2
+toggle_mode = true
+action_mode = 0
+text = "Palabra"
+
+[node name="Button16" type="Button" parent="CenterContainer/VBoxContainer2/VBoxContainer/ButtonGrid"]
+layout_mode = 2
+toggle_mode = true
+action_mode = 0
+text = "Palabra"
+
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/VBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(400, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="AttemptsLeft" type="Label" parent="CenterContainer/VBoxContainer2/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Intentos restantes: X X X"
+horizontal_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="CenterContainer/VBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(400, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Buttons" type="HBoxContainer" parent="CenterContainer/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+alignment = 1
+
+[node name="ConnectButton" type="Button" parent="CenterContainer/VBoxContainer2/VBoxContainer/Buttons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Conectar"
+
+[node name="DeselectButton" type="Button" parent="CenterContainer/VBoxContainer2/VBoxContainer/Buttons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Limpiar"
+
+[node name="BottomBar" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(480, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 674.6
+offset_right = 480.0
+offset_bottom = 705.6
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="NewButton" type="Button" parent="BottomBar"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Nuevo"
+
+[node name="ViewResultsButton" type="Button" parent="BottomBar"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Ver Resultados"

@@ -7,3 +7,21 @@ services:
     ports:
       - "7474:7474"
       - "7687:7687"
+    networks:
+      - app-network
+
+  godot-web-app:
+    build:
+      context: app/
+      dockerfile: Dockerfile
+    container_name: godot-web-container
+    ports:
+      - "6970:6970"
+    depends_on:
+      - neo4j
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

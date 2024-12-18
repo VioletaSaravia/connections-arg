@@ -1,20 +1,20 @@
 count-difs:
-	awk '/# [0-9].*/ {print $$2}' "conecciones.txt" | sort | uniq -c
+	awk '/# [0-9].*/ {print $$2}' "backend/conecciones.txt" | sort | uniq -c
 
 count-words:
-	grep -v "[# ].*" "conecciones.txt" | sort | uniq | wc -l
+	grep -v "[# ].*" "backend/conecciones.txt" | sort | uniq | wc -l
 
 count-cats:
-	grep "#.*" "conecciones.txt" | wc -l
+	grep "#.*" "backend/conecciones.txt" | wc -l
 
 words:
-	grep -v "[# ].*" "conecciones.txt" | sort | uniq
+	grep -v "[# ].*" "backend/conecciones.txt" | sort | uniq
 
 cats:
-	grep "#.*" "conecciones.txt"
+	grep "#.*" "backend/conecciones.txt"
 
 setup:
-	. .venv/bin/activate
+	. backend/.venv/bin/activate
 
 view: setup
-	python graph.py
+	python backend/graph.py
