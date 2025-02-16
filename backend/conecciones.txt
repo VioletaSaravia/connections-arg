@@ -10,6 +10,12 @@ posta
 manzana
 obvio
 
+# 4 COSAS ENTRE LAS QUE PODRÍAS ESTAR
+espada
+pared
+ceja
+cruz
+
 # 1 PARTES DE LA CARA
 boca
 pera
