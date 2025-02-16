@@ -82,7 +82,7 @@ gusto
 barba
 jesus
 rey
-senor
+señor
 
 # 1 CABELLO
 pelo
@@ -99,11 +99,11 @@ flaco
 
 # 2 SATISFECHO
 joya
-pipon
+pipón
 
 # 3 ESTABLECIMIENTOS ANTIGUOS
 posta
-pulperia
+pulpería
 taberna
 
 # 1 REALEZA
@@ -121,6 +121,12 @@ flaco
 # 1 ETNIA
 gitano
 turco
+
+# 4 APODOS DE PRESIDENTES ARGENTINOS
+turco
+tortuga
+pingüino
+yegua
 
 # 4 APODOS DE DTs ARGENTINOS
 cholo
